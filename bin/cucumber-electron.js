@@ -22,7 +22,7 @@ function runCucumberInRendererProcess() {
     args.push('--TTY')
   }
 
-  if (process.env.CUCUMBER_ELECTRON_NO_SANDBOX === 'true') { 
+  if (process.env.CUCUMBER_ELECTRON_NO_SANDBOX === 'true') {
     args.push('--no-sandbox')
   }
 
