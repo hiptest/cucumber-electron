@@ -22,6 +22,10 @@ function runCucumberInRendererProcess() {
     args.push('--TTY')
   }
 
+  if (process.env.CUCUMBER_ELECTRON_NO_SANDBOX === 'true') { 
+    args.push('--no-sandbox')
+  }
+
   var child = spawn(electron, args)
   child.stdout.pipe(process.stdout)
   process.stdin.pipe(child.stdin)
